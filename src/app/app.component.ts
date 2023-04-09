@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Calculator';
+  selector = 1;
+
+  switch(position: number)
+  {
+    this.selector = position;
+    document.documentElement.setAttribute("theme", position.toString());
+  }
 }

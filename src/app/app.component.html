@@ -1,4 +1,4 @@
-<div class="container main_container mt-5">
+<div class="container main_container mt-4">
   <div class="header">
     <p class="calc_title">calc</p>
     <div class="container_theme-selector">
@@ -11,12 +11,41 @@
         </div>
         <div class="input-range">
           <div class="container-balls">
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
+            <div [ngClass]="selector === 1 ? 'ball-selected' : 'ball-noselected'" (click)="switch(1)"></div>
+            <div [ngClass]="selector === 2 ? 'ball-selected' : 'ball-noselected'" (click)="switch(2)"></div>
+            <div [ngClass]="selector === 3 ? 'ball-selected' : 'ball-noselected'" (click)="switch(3)"></div>
           </div>       
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="screen-container mt-2">
+    <div class="screen">
+      <p class="pscreen">399,288</p>
+    </div>
+  </div>
+
+  <div class="keyboard-container mt-3">
+    <div class="keyboard">
+      <div class="seven gen"></div>
+      <div class="eight gen"></div>
+      <div class="nine gen"></div>
+      <div class="del"></div>
+      <div class="four gen"></div>
+      <div class="five gen"></div>
+      <div class="six gen"></div>
+      <div class="plus gen"></div>
+      <div class="one gen"></div>
+      <div class="two gen"></div>
+      <div class="three gen"></div>
+      <div class="minus gen"></div>
+      <div class="dott gen"></div>
+      <div class="zeroo gen"></div>
+      <div class="divide gen"></div>
+      <div class="product gen"></div>
+      <div class="reset"></div>
+      <div class="equal"></div>
     </div>
   </div>
 </div>
