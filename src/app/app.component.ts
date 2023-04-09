@@ -9,6 +9,28 @@ export class AppComponent {
   title = 'Calculator';
   selector = 1;
 
+  isButtonPressed = false;
+  isMouseInside = false;
+
+  onButtonDown() {
+    this.isButtonPressed = true;
+  }
+
+  onButtonUp() {
+    this.isButtonPressed = false;
+  }
+
+  onMouseEnter() {
+    this.isMouseInside = true;
+  }
+
+  onMouseLeave() {
+    this.isMouseInside = false;
+    if (this.isButtonPressed) {
+      this.isButtonPressed = false;
+    }
+  }
+
   switch(position: number)
   {
     this.selector = position;

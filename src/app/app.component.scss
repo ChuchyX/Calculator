@@ -124,17 +124,23 @@
     color: var(--Numbers);
     text-align: center;
 }
+
 .gen:hover{
     cursor: pointer;
+    opacity: 0.8;
 }
+
 .del:hover{
     cursor: pointer;
+    opacity: 0.8;
 }
 .reset:hover{
     cursor: pointer;
+    opacity: 0.8;
 }
 .equal:hover{
     cursor: pointer;
+    opacity: 0.8;
 }
 
 .del{
