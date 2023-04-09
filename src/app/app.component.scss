@@ -1,0 +1,63 @@
+.header{
+    display: flex;
+    justify-content: space-around;
+}
+.main_container{
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+.calc_title{
+    font-size: 2rem;
+    color: var(--Text);
+}
+.container_theme-selector{
+    display: flex;
+}
+.ptheme{
+    font-size: 0.7rem;
+    color: var(--Text);
+    position: relative;
+    top: 3px;
+}
+.positions-theme{
+    display: flex;
+    justify-content: space-around;
+    width: 5rem;
+    margin-left: 1.5rem;
+}
+.pposition{
+    font-size: 0.7rem;
+    color: var(--Text);
+    margin-bottom: 5px;
+}
+.pposition:hover{
+    cursor: default;
+}
+.input-range{
+    width: 5rem;
+    height: 1.5rem;
+    background-color: var(--Keypad);
+    margin-left: 1.5rem;   
+    border-radius: 20px;   
+}
+.input-range:hover{
+    cursor: pointer;
+}
+.ball{
+    margin-top: 2.6px;
+    height: 1.2rem;
+    width: 1.2rem;
+    background-color: var(--Ball);
+    border-radius: 50%;
+}
+.container-balls{
+    display: flex;
+    gap: 6px;
+    padding-left: 5px;
+}
+
+ 
+  
+  
+
+  

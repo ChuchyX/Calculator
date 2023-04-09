@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=League+Spartan:wght@700&family=Outfit:wght@400;700&display=swap");
+:root {
+  --Background: hsl(222, 26%, 31%);
+  --Text: hsl(0, 0%, 100%);
+  --Keypad: hsl(223, 31%, 20%);
+  --Ball: hsl(6, 63%, 50%);
+}
+:root[theme="second"] {
+  --Background: hsl(0, 0%, 90%);
+  --Keypad: hsl(0, 5%, 81%);
+  --Ball: hsl(25, 98%, 40%);
+}
+:root[theme="third"] {
+  --Background: hsl(268, 75%, 9%);
+  --Keypad: hsl(268, 71%, 12%);
+  --Ball: hsl(176, 100%, 44%);
+}
+
+body {
+  // font-family: 'Barlow Semi Condensed', sans-serif;
+  // font-family: 'Outfit', sans-serif;
+  font-family: "League Spartan", sans-serif;
+  background-color: var(--Background);
+}
