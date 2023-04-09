@@ -120,6 +120,9 @@
     background-color: var(--Key);
     border-radius: 10px;
     border-bottom: 3px solid var(--KeyShadow);
+    font-size: 2.2rem;
+    color: var(--Numbers);
+    text-align: center;
 }
 .gen:hover{
     cursor: pointer;
@@ -140,6 +143,10 @@
     background-color: var(--Del);
     border-radius: 10px;
     border-bottom: 3px solid var(--DelShadow);
+    font-size: 1.8rem;
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+    padding-top: 5px;
 }
 .reset{
     width: 95%;
@@ -147,6 +154,10 @@
     background-color: var(--Del);
     border-radius: 10px;
     border-bottom: 3px solid var(--DelShadow);
+    font-size: 1.8rem;
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+    padding-top: 5px;
 }
 .equal{
     width: 95%;
@@ -154,6 +165,10 @@
     background-color: var(--Equal);
     border-radius: 10px;
     border-bottom: 3px solid var(--EqualShadow);
+    font-size: 1.8rem;
+    color: var(--EqualText);
+    text-align: center;
+    padding-top: 5px;
 }
 
 
@@ -212,6 +227,22 @@
     grid-area: equal;
 }
 
+@media (max-width: 440px)
+{
+    .del{
+        font-size: 1rem;
+        padding-top: 15px;      
+    }
+}
+@media (max-width: 767px)
+{
+    .screen{
+        width: 90%;
+    }
+    .keyboard{
+        width: 90%;
+    }
+}
  
   
   

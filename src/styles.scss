@@ -11,6 +11,8 @@
   --DelShadow: hsl(224, 28%, 35%);
   --Equal: hsl(6, 63%, 50%);
   --EqualShadow: hsl(6, 70%, 34%);
+  --Numbers: hsl(221, 14%, 31%);
+  --EqualText: hsl(0, 0%, 100%);
 }
 :root[theme="2"] {
   --Background: hsl(0, 0%, 90%);
@@ -24,6 +26,8 @@
   --DelShadow: hsl(185, 58%, 25%);
   --Equal: hsl(25, 98%, 40%);
   --EqualShadow: hsl(25, 99%, 27%);
+  --Numbers: hsl(60, 10%, 19%);
+  --EqualText: hsl(0, 0%, 100%);
 }
 :root[theme="3"] {
   --Background: hsl(268, 75%, 9%);
@@ -37,6 +41,8 @@
   --DelShadow: hsl(285, 91%, 52%);
   --Equal: hsl(176, 100%, 44%);
   --EqualShadow: hsl(177, 92%, 70%);
+  --Numbers: hsl(52, 100%, 62%);
+  --EqualText: hsl(268, 75%, 9%);
 }
 
 body {
