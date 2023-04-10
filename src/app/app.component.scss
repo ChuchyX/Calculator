@@ -123,6 +123,7 @@
     font-size: 2.2rem;
     color: var(--Numbers);
     text-align: center;
+    user-select: none;
 }
 
 .gen:hover{
@@ -153,6 +154,7 @@
     color: hsl(0, 0%, 100%);
     text-align: center;
     padding-top: 5px;
+    user-select: none;
 }
 .reset{
     width: 95%;
@@ -164,6 +166,7 @@
     color: hsl(0, 0%, 100%);
     text-align: center;
     padding-top: 5px;
+    user-select: none;
 }
 .equal{
     width: 95%;
@@ -175,6 +178,7 @@
     color: var(--EqualText);
     text-align: center;
     padding-top: 5px;
+    user-select: none;
 }
 
 

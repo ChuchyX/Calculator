@@ -22,29 +22,30 @@
 
   <div class="screen-container mt-2">
     <div class="screen">
-      <p class="pscreen">399,288</p>
+      <p class="pscreen" *ngIf="reset">0</p>
+      <p class="pscreen" *ngIf="!reset">{{operator1 | separatorks}}</p>
     </div>
   </div>
 
   <div class="keyboard-container mt-3">
     <div class="keyboard">
-      <div class="gen">7</div>
-      <div class="gen">8</div>
-      <div class="gen">9</div>
+      <div class="seven gen" (click)="addDigit('7')">7</div>
+      <div class="eight gen" (click)="addDigit('8')">8</div>
+      <div class="nine gen" (click)="addDigit('9')">9</div>
       <div class="del">DEL</div>
-      <div class="gen">4</div>
-      <div class="gen">5</div>
-      <div class="gen">6</div>
-      <div class="gen">+</div>
-      <div class="gen">1</div>
-      <div class="gen">2</div>
-      <div class="gen">3</div>
-      <div class="gen">-</div>
-      <div class="gen">.</div>
-      <div class="gen">0</div>
-      <div class="gen">/</div>
-      <div class="gen">x</div>
-      <div class="reset">RESET</div>
+      <div class="four gen" (click)="addDigit('4')">4</div>
+      <div class="five gen" (click)="addDigit('5')">5</div>
+      <div class="six gen" (click)="addDigit('6')">6</div>
+      <div class="plus gen">+</div>
+      <div class="one gen" (click)="addDigit('1')">1</div>
+      <div class="two gen" (click)="addDigit('2')">2</div>
+      <div class="three gen" (click)="addDigit('3')">3</div>
+      <div class="minus gen">-</div>
+      <div class="dott gen" (click)="addDigit('.')">.</div>
+      <div class="zeroo gen" (click)="addDigit('0')">0</div>
+      <div class="divide gen">/</div>
+      <div class="product gen">x</div>
+      <div class="reset" (click)="Reset()">RESET</div>
       <div class="equal">=</div>
     </div>
   </div>
