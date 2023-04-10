@@ -6,6 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class SeparatorksPipe implements PipeTransform {
 
   transform(value: string): string {
+    if(value.length > 18) return "ERROR";
     let numero = value.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     let dot = false;
     let mitad1 = '';

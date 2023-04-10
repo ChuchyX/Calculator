@@ -11,6 +11,9 @@ export class AppComponent {
   operator1 = '';
   operator2: number = 0;
   reset = true;
+  operationSelected = false;
+  operation = '';
+  recentOperation = false;
 
   isButtonPressed = false;
   isMouseInside = false;
@@ -38,6 +41,11 @@ export class AppComponent {
 
   addDigit(caracter: string)
   {
+    if(this.recentOperation)
+    {
+      this.recentOperation = false;
+      this.operator1 = '0';
+    }
     if(this.operator1 === '0')
     {
       if(caracter === '0') return;
@@ -57,5 +65,61 @@ export class AppComponent {
     this.reset = true;
     this.operator1 = '';
     this.operator2 = 0;
+    this.operationSelected = false;
+    this.operation = '';
+  }
+  Del(){
+    if(this.operator1 === '0' || this.operator1 === '') return;
+    if(this.operator1.length == 1 )
+    {
+      this.operator1 = '0';
+      return;
+    }
+    this.operator1 = this.operator1.slice(0, this.operator1.length - 1); 
+  }
+  AddOperation(o: string)
+  {
+    this.operation = o;
+    this.operationSelected = true;
+    this.operator2 = parseFloat(this.operator1);
+    this.operator1 = '0';
+  }
+  Equal()
+  {
+    if(this.operation === '+')
+    {
+      let result = this.operator2 + parseFloat(this.operator1);
+      this.operator1 = result.toString();
+      this.recentOperation = true;
+      this.operation = '';
+    }
+    if(this.operation === '-')
+    {
+      let result = this.operator2 - parseFloat(this.operator1);
+      this.operator1 = result.toString();
+      this.recentOperation = true;
+      this.operation = '';
+    }
+    if(this.operation === '/')
+    {
+      if(this.operator1 === '0')
+      {
+        this.operator1 = 'ERROR';
+        this.recentOperation = true;
+        this.operation = '';
+        return;
+      }
+      let result = this.operator2 / parseFloat(this.operator1);
+      this.operator1 = result.toString();
+      this.recentOperation = true;
+      this.operation = '';
+    }
+    if(this.operation === '*')
+    {
+      let result = this.operator2 * parseFloat(this.operator1);
+      this.operator1 = result.toString();
+      this.recentOperation = true;
+      this.operation = '';
+    }
   }
 }
